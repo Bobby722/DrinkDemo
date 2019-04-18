@@ -10,22 +10,34 @@ import UIKit
 
 class ViewOrderViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableview: UITableView!
     var item=[CdrinkOrder]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.isHidden=false
+        activityIndicator.startAnimating()
+        download()
+        // Do any additional setup after loading the view.
+    }
+    func download(){
         Cdrink.Drink.download(finish: {item in
             if let item = item{
                 self.item = item
                 DispatchQueue.main.async {
                     self.tableview.reloadData()
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.isHidden=true
                 }
             }
         })
-        // Do any additional setup after loading the view.
     }
-    
+    @IBAction func refreshBtn(_ sender: Any) {
+        activityIndicator.isHidden=false
+        activityIndicator.startAnimating()
+        download()
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -42,14 +54,5 @@ class ViewOrderViewController: UIViewController,UITableViewDelegate,UITableViewD
         cell.size.text = item[indexPath.row].size
         return cell
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

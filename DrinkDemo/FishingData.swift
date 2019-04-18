@@ -31,7 +31,7 @@ class Cdrink{
                 })
                 task.resume()
             }catch{
-                
+                print(error)
             }
         }
     }

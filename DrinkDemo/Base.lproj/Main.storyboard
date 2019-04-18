@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3rM-jJ-BbC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.59" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3rM-jJ-BbC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.45"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -377,34 +377,34 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TA-eg-jtS">
-                                                    <rect key="frame" x="20" y="16" width="43" height="41"/>
+                                                    <rect key="frame" x="20" y="16" width="80" height="41"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="43" id="9jQ-MN-TqK"/>
+                                                        <constraint firstAttribute="width" constant="80" id="Lqf-pe-jLy"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHJ-Hx-ldS">
-                                                    <rect key="frame" x="83" y="16" width="39" height="41"/>
+                                                    <rect key="frame" x="120" y="16" width="39" height="41"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sweet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88h-LV-PJB">
-                                                    <rect key="frame" x="142" y="16" width="46" height="41"/>
+                                                    <rect key="frame" x="179" y="16" width="46" height="41"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWl-48-lRI">
-                                                    <rect key="frame" x="198" y="16" width="23" height="41"/>
+                                                    <rect key="frame" x="235" y="16" width="23" height="41"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRa-8q-5kD">
-                                                    <rect key="frame" x="231" y="26" width="31" height="21"/>
+                                                    <rect key="frame" x="268" y="26" width="31" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -441,18 +441,33 @@
                                     <outlet property="delegate" destination="YCA-5g-5L1" id="YiV-EX-c7R"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="TEo-ML-nNh">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="wbg-dF-vJC" firstAttribute="trailing" secondItem="TEo-ML-nNh" secondAttribute="trailing" id="49y-x5-AnJ"/>
                             <constraint firstItem="wbg-dF-vJC" firstAttribute="bottom" secondItem="Lqs-c5-HoK" secondAttribute="bottom" id="8cq-wu-ZLa"/>
                             <constraint firstItem="Lqs-c5-HoK" firstAttribute="leading" secondItem="wbg-dF-vJC" secondAttribute="leading" id="RXM-kl-Udv"/>
                             <constraint firstItem="wbg-dF-vJC" firstAttribute="trailing" secondItem="Lqs-c5-HoK" secondAttribute="trailing" id="Wgo-v2-0WV"/>
+                            <constraint firstItem="TEo-ML-nNh" firstAttribute="leading" secondItem="wbg-dF-vJC" secondAttribute="leading" id="a53-CI-xTo"/>
+                            <constraint firstItem="wbg-dF-vJC" firstAttribute="bottom" secondItem="TEo-ML-nNh" secondAttribute="bottom" id="ahs-Te-orZ"/>
                             <constraint firstItem="Lqs-c5-HoK" firstAttribute="top" secondItem="wbg-dF-vJC" secondAttribute="top" id="gSP-Bb-acm"/>
+                            <constraint firstItem="TEo-ML-nNh" firstAttribute="top" secondItem="wbg-dF-vJC" secondAttribute="top" id="up6-i4-4Qg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wbg-dF-vJC"/>
                     </view>
-                    <navigationItem key="navigationItem" title="查看訂單" id="6Zz-41-LOU"/>
+                    <navigationItem key="navigationItem" title="查看訂單" id="6Zz-41-LOU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="0ls-Bv-ReD">
+                            <connections>
+                                <action selector="refreshBtn:" destination="YCA-5g-5L1" id="D92-UG-xvm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="TEo-ML-nNh" id="13E-CB-NUN"/>
                         <outlet property="tableview" destination="Lqs-c5-HoK" id="1qs-jl-F35"/>
                     </connections>
                 </viewController>
@@ -519,8 +534,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="drink" width="156" height="277.20001220703125"/>
+        <image name="drink" width="650" height="1155"/>
         <image name="drinkicon" width="28" height="28"/>
-        <image name="eye" width="28" height="28"/>
+        <image name="eye" width="35" height="35"/>
     </resources>
 </document>
