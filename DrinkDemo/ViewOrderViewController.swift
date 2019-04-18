@@ -16,12 +16,12 @@ class ViewOrderViewController: UIViewController,UITableViewDelegate,UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityIndicator.isHidden=false
-        activityIndicator.startAnimating()
         download()
         // Do any additional setup after loading the view.
     }
     func download(){
+        self.activityIndicator.isHidden=false
+        self.activityIndicator.startAnimating()
         Cdrink.Drink.download(finish: {item in
             if let item = item{
                 self.item = item
@@ -34,8 +34,6 @@ class ViewOrderViewController: UIViewController,UITableViewDelegate,UITableViewD
         })
     }
     @IBAction func refreshBtn(_ sender: Any) {
-        activityIndicator.isHidden=false
-        activityIndicator.startAnimating()
         download()
     }
     func numberOfSections(in tableView: UITableView) -> Int {
